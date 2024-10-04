@@ -1,18 +1,34 @@
-var customerName="bob"
-function upperCaseCustomerName(){
-    customerName=customerName.toUpperCase();
+
+
+// Write your solution in this file!
+
+// Declare customerName in global scope
+var customerName = 'bob';
+
+// Function to return the customerName
+function getCustomerName() {
+  return customerName;
+}
+
+
+function upperCaseCustomerName() {
+  customerName = customerName.toUpperCase();
 }
 
 
 function setBestCustomer() {
-    bestCustomer = 'not bob'; 
-}
-function overwriteBestCustomer(){
-    bestCustomer='maybe bob'
+  var bestCustomer = 'not bob';
+  window.bestCustomer = bestCustomer;
 }
 
-const leastFavoriteCustomer = "john"; 
 
-function changeLeastFavouriteCustomer() {
-    leastFavoriteCustomer = "kevin"; 
+function overwriteBestCustomer(newBestCustomer) {
+  window.bestCustomer = newBestCustomer;
 }
+
+
+function changeLeastFavoriteCustomer() {
+  const leastFavoriteCustomer = 'someone';
+  leastFavoriteCustomer = 'someone else'; 
+}
+
